@@ -1,0 +1,27 @@
+{
+    "name": "snowball",
+    "version": "0.0.1",
+    "description": "This stemmming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.",
+    "authors": [
+        "Harold Thetiot <hthetiot@gmail.com> (http://melchizetech.com)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hthetiot/node-snowball"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/hthetiot/node-snowball/blob/master/LICENSE"
+        }
+    ],
+    
+    "main": "index.js",
+    
+    "scripts": {
+        "test": "nodeunit test"
+    },
+    "devDependencies": {
+        "nodeunit": "*"
+    }
+}
