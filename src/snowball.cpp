@@ -1,6 +1,5 @@
 #include <node.h>
-#include <string>
-#include <stdlib.h>
+#include <v8.h>
 #include "libstemmer/include/libstemmer.h"
 #include "libstemmer/runtime/header.h"
 
