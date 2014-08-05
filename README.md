@@ -19,6 +19,38 @@ snowball.stemword('consignment', 'english'); // consign
 snowball.stemword('continuation', 'french'); // continu
 ```
 
+## Doc
+
+``` javascript
+snowball.stemword(
+	word, 			// The word you need the stemming from 
+	language, 		// The language (optional, default is "english") 
+	encoding		// The text encoding (optional, default is "UTF-8") 
+); 
+```
+
+Supported language arguments:
+
+ * danish
+ * dutch
+ * english
+ * finnish
+ * french
+ * german
+ * hungarian
+ * italian
+ * norwegian
+ * porter
+ * protuguese
+ * spanish
+ * swedish
+ * romanian
+
+Supported encoding arguments:
+
+ * UTF-8
+ * ISO-8859-1
+
 ## To compile, run
 
 ```
