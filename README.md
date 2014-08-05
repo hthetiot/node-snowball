@@ -23,9 +23,9 @@ snowball.stemword('continuation', 'french'); // continu
 
 ``` javascript
 snowball.stemword(
-	word, 			// The word you need the stemming from 
-	language, 		// The language (optional, default is "english") 
-	encoding		// The text encoding (optional, default is "UTF-8") 
+	word,      // The word you need the stemming from 
+	language,  // The language (optional, default is "english") 
+	encoding   // The text encoding (optional, default is "UTF-8") 
 ); 
 ```
 
