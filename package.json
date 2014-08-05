@@ -1,6 +1,6 @@
 {
     "name": "node-snowball",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "This module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.",
     "authors": [
         "Harold Thetiot <hthetiot@gmail.com> (http://melchizetech.com)"
