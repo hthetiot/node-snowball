@@ -29,7 +29,7 @@ snowball.stemword(
 ); 
 ```
 
-Supported language arguments:
+Supported language argument:
 
  * danish
  * dutch
@@ -46,7 +46,7 @@ Supported language arguments:
  * swedish
  * romanian
 
-Supported encoding arguments:
+Supported encoding argument:
 
  * UTF-8
  * ISO-8859-1
