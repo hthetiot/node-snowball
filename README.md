@@ -1,6 +1,14 @@
-**node-snowball** - bindings to the [libstemmer](http://snowball.tartarus.org/download.php) library.
+[![Build Status](https://travis-ci.org/hthetiot/node-snowball.svg?branch=master)](https://travis-ci.org/hthetiot/node-snowball)
 
-    npm install node-snowball
+
+**node-snowball** - 
+
+Bindings to the [libstemmer](http://snowball.tartarus.org/download.php) C library.
+
+## Install
+```
+npm install node-snowball
+```
 
 ## Usage
 
