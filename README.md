@@ -6,10 +6,9 @@
 
 ```javascript
 var snowball = require('snowball');
-snowball.stem('stemming'); //stem
-snowball.stem('stems');    //stem
-snowball.stem('stemmed');  //stem
-snowball.stem('phones');   //phone
+snowball.stemword('consignment'); //consign
+snowball.stemword('consignment', 'english'); // consign
+snowball.stemword('continuation', 'french'); // continu
 ```
 
 ## To compile, run
