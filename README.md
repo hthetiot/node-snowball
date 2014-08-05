@@ -5,7 +5,7 @@
 ## Usage
 
 ```javascript
-var snowball = require('snowball');
+var snowball = require('node-snowball');
 snowball.stemword('consignment'); //consign
 snowball.stemword('consignment', 'english'); // consign
 snowball.stemword('continuation', 'french'); // continu
