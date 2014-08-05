@@ -1,5 +1,5 @@
 {
-    "name": "snowball",
+    "name": "node-snowball",
     "version": "0.0.1",
     "description": "This stemmming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.",
     "authors": [
