@@ -1,9 +1,20 @@
-[![Build Status](https://travis-ci.org/hthetiot/node-snowball.svg?branch=master)](https://travis-ci.org/hthetiot/node-snowball)
-
-
 **node-snowball**
 
-Bindings to the [libstemmer](http://snowball.tartarus.org/download.php) C library.
+[![Build Status](https://travis-ci.org/hthetiot/node-snowball.svg?branch=master)](https://travis-ci.org/hthetiot/node-snowball)
+[![NPM](https://nodei.co/npm/<package>.png)](https://npmjs.org/package/<package>)
+
+This stemmming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.
+That allow you to get from a word a reduced, inflected (or sometimes derived) word to the original word stem, base or root.
+
+Examples:
+> A stemmer for English, for example, should identify the string "cats" (and possibly "catlike", "catty" etc.) as based on the root "cat", and "stemmer", "stemming", "stemmed" as based on "stem". A stemming algorithm reduces the words "fishing", "fished", and "fisher" to the root word, "fish". On the other hand, "argue", "argued", "argues", "arguing", and "argus" reduce to the stem "argu" (illustrating the case where the stem is not itself a word or root) but "argument" and "arguments" reduce to the stem "argument".
+
+This library is using bindings to the [libstemmer](http://snowball.tartarus.org/download.php) C library.
+It's support 
+
+More about Stemming:
+- [Stemming wikipedia](http://en.wikipedia.org/wiki/Stemming)
+- [Racinisation wikipedia](http://fr.wikipedia.org/wiki/Racinisation)
 
 ## Install
 ```
@@ -27,17 +38,17 @@ snowball.stemword(['consignment', 'conspiring'], 'english'); // ['consign', 'con
 snowball.stemword(['continuation', 'contrainte'], 'french'); // ['continu', 'contrain']
 ```
 
-## Doc
+## Quick Doc
 
 ``` javascript
 snowball.stemword(
-	word,      // The word you need the stemming from 
-	language,  // The language (optional, default is "english") 
-	encoding   // The text encoding (optional, default is "UTF-8") 
+	word || words, // The word or group of words that you need the stemming from 
+	language,      // The language (optional, default is "english") 
+	encoding       // The text encoding (optional, default is "UTF-8") 
 ); 
 ```
 
-Supported language second argument:
+### Supported language second argument:
 
  * danish
  * dutch
@@ -54,7 +65,7 @@ Supported language second argument:
  * romanian
  * porter (not a language)
 
-Supported encoding third argument:
+### Supported encoding third argument:
 
  * UTF-8
  * ISO-8859-1
