@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/hthetiot/node-snowball.svg?branch=master)](https://travis-ci.org/hthetiot/node-snowball)
 
-This stemmming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.
+This stemming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.
 That allow you to get from a word a reduced, inflected (or sometimes derived) word to the original word stem, base or root.
 
 Examples:
