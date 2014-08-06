@@ -1,13 +1,3 @@
-var snowball = require('./build/Release/snowball'), 
-	cache = {};
+var snowball = require('./build/Release/snowball');
 
-exports.stemword = function (word) {
-    if (typeof cache[word] !== 'undefined') {
-        return cache[word];
-    }
-    return cache[word] = snowball.stemword(word);
-}
-
-exports.emptyCache = function () {
-    cache = {};
-}
+module.exports = snowball;

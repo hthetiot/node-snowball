@@ -14,9 +14,17 @@ npm install node-snowball
 
 ```javascript
 var snowball = require('node-snowball');
-snowball.stemword('consignment'); //consign
-snowball.stemword('consignment', 'english'); // consign
-snowball.stemword('continuation', 'french'); // continu
+
+// Using String
+snowball.stemword('consignment'); // 'consign'
+
+// Using String and a specific language algorithm
+snowball.stemword('consignment', 'english'); // 'consign'
+snowball.stemword('continuation', 'french'); // 'continu'
+
+// Or using Array of string
+snowball.stemword(['consignment', 'conspiring'], 'english'); // ['consign', 'conspiri']
+snowball.stemword(['continuation', 'contrainte'], 'french'); // ['continu', 'contrain']
 ```
 
 ## Doc
@@ -29,7 +37,7 @@ snowball.stemword(
 ); 
 ```
 
-Supported language argument:
+Supported language second argument:
 
  * danish
  * dutch
@@ -40,13 +48,13 @@ Supported language argument:
  * hungarian
  * italian
  * norwegian
- * porter
  * protuguese
  * spanish
  * swedish
  * romanian
+ * porter (not a language)
 
-Supported encoding argument:
+Supported encoding third argument:
 
  * UTF-8
  * ISO-8859-1
