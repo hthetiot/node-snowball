@@ -77,6 +77,8 @@ snowball.stemword(
 
 ## To compile, run
 
+Supported NodeJS versions: 0.11, 0.12, 4.x
+
 ```
 npm build .
 ```
