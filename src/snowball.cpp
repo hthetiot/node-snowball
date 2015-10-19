@@ -1,29 +1,21 @@
-#define BUILDING_NODE_EXTENSION
-#include <node.h>
-#include <v8.h>
 #include "libstemmer/include/libstemmer.h"
 #include "libstemmer/runtime/header.h"
 
+#include "snowball.h"
+
 using namespace v8;
 
-// Returns the Nth number in the fibonacci sequence where N is the first
-// argument passed.
-Handle<Value> Stemword(const v8::Arguments& args) {
-    HandleScope scope;
+NAN_METHOD(Stemword) {
 
     // Check that there are enough arguments. If we access an index that doesn't
     // exist, it'll be Undefined().
-    if (args.Length() < 1) {
+    if (info.Length() < 1) {
         // No argument was passed. Throw an exception to alert the user to
         // incorrect usage. Alternatively, we could just use 0.
-        return ThrowException(
-            Exception::TypeError(String::New("First argument must be a string"))
-        );
-    } else if (
-        !args[0]->IsString() && !args[0]->IsArray()
-    ) {
-        ThrowException(Exception::TypeError(String::New("Wrong first argument type, expect type String or Array.")));
-        return scope.Close(Undefined());
+        Nan::ThrowTypeError("First argument must be a string");
+
+    } else if ( !info[0]->IsString() && !info[0]->IsArray()) {
+        Nan::ThrowTypeError("Wrong first argument type, expect type String or Array.");
     }
 
     // Cast a value to a specific type. See
@@ -36,19 +28,21 @@ Handle<Value> Stemword(const v8::Arguments& args) {
     const unsigned char * stemmed;
 
     // Convert to C String
-    v8::String::Utf8Value lang(args[1]);
-    v8::String::Utf8Value enc(args[2]);
-    const char * strLang = (args.Length() > 1) ? *lang : "english";
-    const char * strEnc = (args.Length() > 2) ? *enc : "UTF_8";
+    v8::String::Utf8Value lang(info[1]);
+    v8::String::Utf8Value enc(info[2]);
+    const char * strLang = (info.Length() > 1) ? *lang : "english";
+    const char * strEnc = (info.Length() > 2) ? *enc : "UTF_8";
 
-    struct sb_stemmer * stemmer = stemmer = sb_stemmer_new(strLang, strEnc);
+    struct sb_stemmer * stemmer;
 
-    if (args[0]->IsArray()) {
+    stemmer = sb_stemmer_new(strLang, strEnc);
 
-        v8::Handle<v8::Array> strArray = v8::Handle<v8::Array>::Cast(args[0]);
+    if (info[0]->IsArray()) {
+
+        v8::Handle<v8::Array> strArray = v8::Handle<v8::Array>::Cast(info[0]);
         int strArrayLength = strArray->Length();
 
-        v8::Local<v8::Array> arrayResult = v8::Array::New(strArrayLength);
+        v8::Local<v8::Array> arrayResult = Nan::New<v8::Array>(strArrayLength);
         for (int i = 0; i < strArrayLength; i++) {
 
             // Convert to C String
@@ -61,18 +55,17 @@ Handle<Value> Stemword(const v8::Arguments& args) {
                 strlen(strValue)             // Get length
             );
 
-            arrayResult->Set(v8::Number::New(i), v8::String::New((char *)(stemmed)));
+            Nan::Set(arrayResult, i, Nan::New((const char *)stemmed).ToLocalChecked());
         }
 
         sb_stemmer_delete(stemmer);
-
-        return scope.Close(arrayResult);
+        info.GetReturnValue().Set(arrayResult);
 
     } else {
 
         // Convert to C String
-        v8::String::Utf8Value str(args[0]);
-        strValue = (args.Length() > 0) ? *str : "";
+        v8::String::Utf8Value str(info[0]);
+        strValue = (info.Length() > 0) ? *str : "";
 
         stemmed = sb_stemmer_stem(
             stemmer,                     // Use exising instance
@@ -80,17 +73,10 @@ Handle<Value> Stemword(const v8::Arguments& args) {
             strlen(strValue)             // Get length
         );
 
-        v8::Handle<v8::String> strResult = v8::String::New((char *)(stemmed));
+        v8::Local<v8::String> strResult = Nan::New((char *)stemmed).ToLocalChecked();
 
         sb_stemmer_delete(stemmer);
 
-        return scope.Close(strResult);
+        info.GetReturnValue().Set(strResult);
     }
 }
-
-void Init(Handle<Object> exports) {
-  exports->Set(String::NewSymbol("stemword"),
-      FunctionTemplate::New(Stemword)->GetFunction());
-}
-
-NODE_MODULE(snowball, Init)

@@ -1,28 +1,30 @@
 {
-    "name": "node-snowball",
-    "version": "0.1.16",
-    "description": "This module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.",
-    "authors": [
-        "Harold Thetiot <hthetiot@gmail.com> (http://melchizetech.com)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/hthetiot/node-snowball"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/hthetiot/node-snowball/blob/master/LICENSE"
-        }
-    ],
-    
-    "main": "index.js",
-    
-    "scripts": {
-        "start": "npm build . && nodeunit test",
-        "test": "nodeunit test"
-    },
-    "devDependencies": {
-        "nodeunit": "*"
+  "name": "node-snowball",
+  "version": "0.1.16",
+  "description": "This module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.",
+  "authors": [
+    "Harold Thetiot <hthetiot@gmail.com> (http://melchizetech.com)",
+    "Richard Hull <rm_hull@yahoo.co.uk>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hthetiot/node-snowball"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hthetiot/node-snowball/blob/master/LICENSE"
     }
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "npm build . && nodeunit test",
+    "test": "nodeunit test"
+  },
+  "devDependencies": {
+    "nodeunit": "*"
+  },
+  "dependencies": {
+    "nan": "^2.1.0"
+  }
 }
