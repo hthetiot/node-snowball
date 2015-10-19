@@ -6,7 +6,7 @@ function testStemWords(test, lang) {
     var wordsIndex = Object.keys(words);
 
   wordsIndex.forEach(function (word) {
-    test.equal(snowball.stemword(word, lang), words[word]);
+    test.equal(snowball.stemword(word, lang), words[word], "[" + lang + "] Failed to stem: " + word);
   });
 }
 
