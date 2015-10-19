@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/node-snowball.png)](https://npmjs.org/package/node-snowball)
 
-[![Build Status](https://travis-ci.org/hthetiot/node-snowball.svg?branch=master)](https://travis-ci.org/hthetiot/node-snowball)
+[![Build Status](https://travis-ci.org/rm-hull/node-snowball.svg?branch=master)](https://travis-ci.org/rm-hull/node-snowball)
 
 This stemming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.
 That allow you to get from a word a reduced, inflected (or sometimes derived) word from the original word stem, base or root.
