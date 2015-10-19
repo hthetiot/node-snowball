@@ -58,7 +58,7 @@ Handle<Value> Stemword(const v8::Arguments& args) {
             stemmed = sb_stemmer_stem(
                 stemmer,                     // Use exising instance
                 (unsigned char *)(strValue), // Convert to "unsigned char *"
-                sizeof(strValue)             // Get length
+                strlen(strValue)             // Get length
             );
 
             arrayResult->Set(v8::Number::New(i), v8::String::New((char *)(stemmed)));
@@ -77,7 +77,7 @@ Handle<Value> Stemword(const v8::Arguments& args) {
         stemmed = sb_stemmer_stem(
             stemmer,                     // Use exising instance
             (unsigned char *)(strValue), // Convert to "unsigned char *"
-            sizeof(strValue)             // Get length
+            strlen(strValue)             // Get length
         );
 
         v8::Handle<v8::String> strResult = v8::String::New((char *)(stemmed));
