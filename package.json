@@ -22,7 +22,9 @@
     "test": "nodeunit test"
   },
   "devDependencies": {
-    "nan": "^2.1.0",
     "nodeunit": "*"
+  },
+  "dependencies": {
+    "nan": "^2.1.0"
   }
 }
