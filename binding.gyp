@@ -2,7 +2,12 @@
     "targets": [
         {
             "target_name": "snowball",
+            "include_dirs" : [ 
+                "<!(node -e \"require('nan')\")"
+            ],
             "sources": [
+                "src/snowball.cpp",
+                "src/NativeExtension.cpp",
                 "src/libstemmer/libstemmer/libstemmer.c",
                 "src/libstemmer/runtime/api.c",
                 "src/libstemmer/runtime/utilities.c",
@@ -36,8 +41,7 @@
                 "src/libstemmer/src_c/stem_UTF_8_russian.c",
                 "src/libstemmer/src_c/stem_UTF_8_spanish.c",
                 "src/libstemmer/src_c/stem_UTF_8_swedish.c",
-                "src/libstemmer/src_c/stem_UTF_8_turkish.c",
-                "src/snowball.cpp"
+                "src/libstemmer/src_c/stem_UTF_8_turkish.c"
             ]
         }
     ]

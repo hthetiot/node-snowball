@@ -2,16 +2,20 @@
 
 [![NPM](https://nodei.co/npm/node-snowball.png)](https://npmjs.org/package/node-snowball)
 
-[![Build Status](https://travis-ci.org/hthetiot/node-snowball.svg?branch=master)](https://travis-ci.org/hthetiot/node-snowball)
+[![Build Status](https://travis-ci.org/rm-hull/node-snowball.svg?branch=master)](https://travis-ci.org/rm-hull/node-snowball)
 
 This stemming module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.
 That allow you to get from a word a reduced, inflected (or sometimes derived) word from the original word stem, base or root.
 
 Examples:
-> A stemmer for English, for example, should identify the string "cats" (and possibly "catlike", "catty" etc.) as based on the root "cat", and "stemmer", "stemming", "stemmed" as based on "stem". A stemming algorithm reduces the words "fishing", "fished", and "fisher" to the root word, "fish". On the other hand, "argue", "argued", "argues", "arguing", and "argus" reduce to the stem "argu" (illustrating the case where the stem is not itself a word or root) but "argument" and "arguments" reduce to the stem "argument".
+> A stemmer for English, for example, should identify the string "cats" (and possibly "catlike", "catty" etc.)
+> as based on the root "cat", and "stemmer", "stemming", "stemmed" as based on "stem". A stemming algorithm
+> reduces the words "fishing", "fished", and "fisher" to the root word, "fish". On the other hand, "argue",
+> "argued", "argues", "arguing", and "argus" reduce to the stem "argu" (illustrating the case where the stem
+> is not itself a word or root) but "argument" and "arguments" reduce to the stem "argument".
 
 This library is using bindings to the [libstemmer](http://snowball.tartarus.org/download.php) C library.
-It's support 
+It's support
 
 More about Stemming:
 - [Stemming wikipedia](http://en.wikipedia.org/wiki/Stemming)
@@ -43,10 +47,10 @@ snowball.stemword(['continuation', 'contrainte'], 'french'); // ['continu', 'con
 
 ``` javascript
 snowball.stemword(
-	word || words, // The word or group of words that you need the stemming from 
-	language,      // The language (optional, default is "english") 
-	encoding       // The text encoding (optional, default is "UTF-8") 
-); 
+    word || words, // The word or group of words that you need the stemming from
+    language,      // The language (optional, default is "english")
+    encoding       // The text encoding (optional, default is "UTF-8")
+);
 ```
 
 ### Supported language second argument:
@@ -72,6 +76,8 @@ snowball.stemword(
  * ISO-8859-1
 
 ## To compile, run
+
+Supported NodeJS versions: 0.11, 0.12, 4.x
 
 ```
 npm build .
