@@ -6,8 +6,6 @@
 
 using namespace v8;
 
-// Returns the Nth number in the fibonacci sequence where N is the first
-// argument passed.
 Handle<Value> Stemword(const v8::Arguments& args) {
     HandleScope scope;
 
