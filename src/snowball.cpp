@@ -37,7 +37,11 @@ NAN_METHOD(Stemword) {
 
     stemmer = sb_stemmer_new(strLang, strEnc);
 
-    if (info[0]->IsArray()) {
+    if (stemmer == NULL) {
+        Nan::ThrowError("Could not create stemmer.");
+
+
+    } else if (info[0]->IsArray()) {
 
         v8::Handle<v8::Array> strArray = v8::Handle<v8::Array>::Cast(info[0]);
         int strArrayLength = strArray->Length();

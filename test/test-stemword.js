@@ -10,10 +10,18 @@ function testStemWords(test, lang) {
   });
 }
 
+function testUnknownLanguage(test) {
+  test.throws(function() {
+    snowball.stemword("Hello world !", "tl");
+  }, Error, "Could not create stemmer.");
+}
+
+
 exports['stemword'] = function (test) {
 
     testStemWords(test, "english");
     testStemWords(test, "french");
+    testUnknownLanguage(test, "tl");
 
     test.done();
 };
