@@ -27,8 +27,7 @@ stem_file(struct sb_stemmer * stemmer, FILE * f_in, FILE * f_out)
         {
             int i = 0;
 	    int inlen = 0;
-            while(1) {
-                if (ch == '\n' || ch == EOF) break;
+            while (ch != '\n' && ch != EOF) {
                 if (i == lim) {
                     sb_symbol * newb;
 		    newb = (sb_symbol *)
@@ -54,29 +53,27 @@ stem_file(struct sb_stemmer * stemmer, FILE * f_in, FILE * f_out)
                     fprintf(stderr, "Out of memory");
                     exit(1);
                 }
-                else
-		{
-		    if (pretty == 1) {
-			fwrite(b, i, 1, f_out);
-			fputs(" -> ", f_out);
-		    } else if (pretty == 2) {
-			fwrite(b, i, 1, f_out);
-			if (sb_stemmer_length(stemmer) > 0) {
-			    int j;
-			    if (inlen < 30) {
-				for (j = 30 - inlen; j > 0; j--)
-				    fputs(" ", f_out);
-			    } else {
-				fputs("\n", f_out);
-				for (j = 30; j > 0; j--)
-				    fputs(" ", f_out);
-			    }
-			}
-		    }
 
-		    fputs((char *)stemmed, f_out);
-		    putc('\n', f_out);
-		}
+                if (pretty == 1) {
+                    fwrite(b, i, 1, f_out);
+                    fputs(" -> ", f_out);
+                } else if (pretty == 2) {
+                    fwrite(b, i, 1, f_out);
+                    if (sb_stemmer_length(stemmer) > 0) {
+                        int j;
+                        if (inlen < 30) {
+                            for (j = 30 - inlen; j > 0; j--)
+                                fputs(" ", f_out);
+                        } else {
+                            fputs("\n", f_out);
+                            for (j = 30; j > 0; j--)
+                                fputs(" ", f_out);
+                        }
+                    }
+                }
+
+                fputs((const char *)stemmed, f_out);
+                putc('\n', f_out);
             }
         }
     }
@@ -104,7 +101,7 @@ usage(int n)
 	  "If -p is given the output file consists of each word of the input\n"
 	  "file followed by \"->\" followed by its stemmed equivalent.\n"
 	  "If -p2 is given the output file is a two column layout containing\n"
-	  "the input words in the first column and the stemmed eqivalents in\n"
+	  "the input words in the first column and the stemmed equivalents in\n"
 	  "the second column.\n"
 	  "Otherwise, the output file consists of the stemmed words, one per\n"
 	  "line.\n"
@@ -117,23 +114,22 @@ usage(int n)
 int
 main(int argc, char * argv[])
 {
-    char * in = 0;
-    char * out = 0;
+    const char * in = 0;
+    const char * out = 0;
     FILE * f_in;
     FILE * f_out;
     struct sb_stemmer * stemmer;
 
-    char * language = "english";
-    char * charenc = NULL;
+    const char * language = "english";
+    const char * charenc = NULL;
 
-    char * s;
     int i = 1;
     pretty = 0;
 
     progname = argv[0];
 
     while(i < argc) {
-	s = argv[i++];
+        const char * s = argv[i++];
 	if (s[0] == '-') {
 	    if (strcmp(s, "-o") == 0) {
 		if (i >= argc) {
