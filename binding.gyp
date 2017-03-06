@@ -24,8 +24,10 @@
                 "src/libstemmer/src_c/stem_ISO_8859_1_portuguese.c",
                 "src/libstemmer/src_c/stem_ISO_8859_1_spanish.c",
                 "src/libstemmer/src_c/stem_ISO_8859_1_swedish.c",
+                "src/libstemmer/src_c/stem_ISO_8859_2_hungarian.c",
                 "src/libstemmer/src_c/stem_ISO_8859_2_romanian.c",
                 "src/libstemmer/src_c/stem_KOI8_R_russian.c",
+                "src/libstemmer/src_c/stem_UTF_8_arabic.c",
                 "src/libstemmer/src_c/stem_UTF_8_danish.c",
                 "src/libstemmer/src_c/stem_UTF_8_dutch.c",
                 "src/libstemmer/src_c/stem_UTF_8_english.c",
@@ -41,6 +43,7 @@
                 "src/libstemmer/src_c/stem_UTF_8_russian.c",
                 "src/libstemmer/src_c/stem_UTF_8_spanish.c",
                 "src/libstemmer/src_c/stem_UTF_8_swedish.c",
+                "src/libstemmer/src_c/stem_UTF_8_tamil.c",
                 "src/libstemmer/src_c/stem_UTF_8_turkish.c"
             ]
         }

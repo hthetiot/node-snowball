@@ -11,8 +11,6 @@ src_c/stem_ISO_8859_1_french.c
 src_c/stem_ISO_8859_1_french.h
 src_c/stem_ISO_8859_1_german.c
 src_c/stem_ISO_8859_1_german.h
-src_c/stem_ISO_8859_1_hungarian.c
-src_c/stem_ISO_8859_1_hungarian.h
 src_c/stem_ISO_8859_1_italian.c
 src_c/stem_ISO_8859_1_italian.h
 src_c/stem_ISO_8859_1_norwegian.c
@@ -25,10 +23,14 @@ src_c/stem_ISO_8859_1_spanish.c
 src_c/stem_ISO_8859_1_spanish.h
 src_c/stem_ISO_8859_1_swedish.c
 src_c/stem_ISO_8859_1_swedish.h
+src_c/stem_ISO_8859_2_hungarian.c
+src_c/stem_ISO_8859_2_hungarian.h
 src_c/stem_ISO_8859_2_romanian.c
 src_c/stem_ISO_8859_2_romanian.h
 src_c/stem_KOI8_R_russian.c
 src_c/stem_KOI8_R_russian.h
+src_c/stem_UTF_8_arabic.c
+src_c/stem_UTF_8_arabic.h
 src_c/stem_UTF_8_danish.c
 src_c/stem_UTF_8_danish.h
 src_c/stem_UTF_8_dutch.c
@@ -59,6 +61,8 @@ src_c/stem_UTF_8_spanish.c
 src_c/stem_UTF_8_spanish.h
 src_c/stem_UTF_8_swedish.c
 src_c/stem_UTF_8_swedish.h
+src_c/stem_UTF_8_tamil.c
+src_c/stem_UTF_8_tamil.h
 src_c/stem_UTF_8_turkish.c
 src_c/stem_UTF_8_turkish.h
 runtime/api.c
