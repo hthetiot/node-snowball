@@ -14,7 +14,7 @@ Examples:
 > "argued", "argues", "arguing", and "argus" reduce to the stem "argu" (illustrating the case where the stem
 > is not itself a word or root) but "argument" and "arguments" reduce to the stem "argument".
 
-This library is using bindings to the [libstemmer](http://snowball.tartarus.org/download.php) C library.
+This library is using bindings to the [libstemmer](http://snowball.tartarus.org/download.html) C library.
 It's support
 
 More about Stemming:
