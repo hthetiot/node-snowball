@@ -28,10 +28,8 @@ NAN_METHOD(Stemword) {
     const unsigned char * stemmed;
 
     // Convert to C String
-    v8::String::Utf8Value lang(info[1]);
-    v8::String::Utf8Value enc(info[2]);
-    const char * strLang = (info.Length() > 1) ? *lang : "english";
-    const char * strEnc = (info.Length() > 2) ? *enc : "UTF_8";
+    const char * strLang = (info.Length() > 1) ? *Nan::Utf8String(info[1]) : "english";
+    const char * strEnc = (info.Length() > 2) ? *Nan::Utf8String(info[2]) : "UTF_8";
 
     struct sb_stemmer * stemmer;
 
@@ -50,8 +48,7 @@ NAN_METHOD(Stemword) {
         for (int i = 0; i < strArrayLength; i++) {
 
             // Convert to C String
-            v8::String::Utf8Value str(strArray->Get(i));
-            strValue = *str;
+            strValue = *Nan::Utf8String(strArray->Get(i));
 
             stemmed = sb_stemmer_stem(
                 stemmer,                     // Use exising instance
@@ -68,8 +65,7 @@ NAN_METHOD(Stemword) {
     } else {
 
         // Convert to C String
-        v8::String::Utf8Value str(info[0]);
-        strValue = (info.Length() > 0) ? *str : "";
+        strValue = (info.Length() > 0) ? *Nan::Utf8String(info[0]) : "";
 
         stemmed = sb_stemmer_stem(
             stemmer,                     // Use exising instance
