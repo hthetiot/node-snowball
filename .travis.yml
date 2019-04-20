@@ -1,5 +1,7 @@
 language: node_js
 node_js:
+  - "11.10"
+  - "10.15"
   - "7.7"
   - "6.9"
   - "4.2"
@@ -10,6 +12,10 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - npm install -g nodeunit
+
+script:
+  - npm build .
+  - npm test
 
 env:
   - CXX=g++-4.8
