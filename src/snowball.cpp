@@ -41,14 +41,14 @@ NAN_METHOD(Stemword) {
 
     } else if (info[0]->IsArray()) {
 
-        v8::Handle<v8::Array> strArray = v8::Handle<v8::Array>::Cast(info[0]);
+        v8::Local<v8::Array> strArray = v8::Local<v8::Array>::Cast(info[0]);
         int strArrayLength = strArray->Length();
 
         v8::Local<v8::Array> arrayResult = Nan::New<v8::Array>(strArrayLength);
         for (int i = 0; i < strArrayLength; i++) {
 
             // Convert to C String
-            strValue = *Nan::Utf8String(strArray->Get(i));
+            strValue = *Nan::Utf8String(Nan::Get(strArray, i).ToLocalChecked());
 
             stemmed = sb_stemmer_stem(
                 stemmer,                     // Use exising instance

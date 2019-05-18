@@ -1,6 +1,6 @@
 {
   "name": "node-snowball",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT",
   "description": "This module for Node.js provides stemming capability for a variety of languages using Dr. M.F. Porter's Snowball API.",
   "authors": [
@@ -26,6 +26,6 @@
     "nodeunit": "*"
   },
   "dependencies": {
-    "nan": "^2.1.0"
+    "nan": "^2.14.0"
   }
 }
