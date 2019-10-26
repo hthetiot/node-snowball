@@ -19,11 +19,11 @@
   ],
   "main": "index.js",
   "scripts": {
-    "start": "npm build . && nodeunit test",
-    "test": "nodeunit test"
+    "start": "npm build . && jest",
+    "test": "jest"
   },
   "devDependencies": {
-    "nodeunit": "*"
+    "jest": "^24.9.0"
   },
   "dependencies": {
     "nan": "^2.14.0"
