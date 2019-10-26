@@ -12,9 +12,6 @@ node_js:
 services:
   - xvfb
 
-before_script:
-  - npm install -g nodeunit
-
 script:
   - npm build .
   - npm test
