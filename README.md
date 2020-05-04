@@ -69,6 +69,7 @@ snowball.stemword(
  * spanish
  * swedish
  * romanian
+ * russian
  * tamil
  * turkish
  * porter (not a language)
