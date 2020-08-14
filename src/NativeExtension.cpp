@@ -10,4 +10,6 @@ NAN_MODULE_INIT(InitAll) {
     Nan::GetFunction(Nan::New<FunctionTemplate>(Stemword)).ToLocalChecked());
 }
 
-NODE_MODULE(NativeExtension, InitAll)
+NODE_MODULE_INIT() {
+  InitAll(exports);
+}
