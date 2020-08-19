@@ -56,14 +56,22 @@ snowball.stemword(
 ### Supported language second argument:
 
  * arabic
+ * basque
+ * catalan
  * danish
  * dutch
  * english
  * finnish
  * french
  * german
+ * greek
+ * hindi
  * hungarian
+ * indonesian
+ * irish
  * italian
+ * lithuanian
+ * nepali
  * norwegian
  * portuguese
  * spanish
