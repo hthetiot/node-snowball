@@ -23,7 +23,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^29.4.3"
   },
   "dependencies": {
     "nan": "^2.14.0"
