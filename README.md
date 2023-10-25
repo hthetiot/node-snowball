@@ -15,12 +15,15 @@ Examples:
 > "argued", "argues", "arguing", and "argus" reduce to the stem "argu" (illustrating the case where the stem
 > is not itself a word or root) but "argument" and "arguments" reduce to the stem "argument".
 
-This library is using bindings to the [libstemmer](http://snowball.tartarus.org/download.html) C library.
+This library is using bindings to the [libstemmer](https://snowballstem.org/download.html) C library.
 It's support
 
 More about Stemming:
 - [Stemming wikipedia](http://en.wikipedia.org/wiki/Stemming)
 - [Racinisation wikipedia](http://fr.wikipedia.org/wiki/Racinisation)
+
+More about Snowball libstemmer library:
+- [https://snowballstem.org](https://snowballstem.org)
 
 ## Install
 ```
