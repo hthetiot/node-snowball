@@ -67,7 +67,6 @@ snowball.stemword(
  * german
  * greek
  * hindi
- * hungarian
  * indonesian
  * irish
  * italian
@@ -81,6 +80,9 @@ snowball.stemword(
  * russian
  * tamil
  * turkish
+ * armenian
+ * serbian
+ * yiddish
  * porter (not a language)
 
 ### Supported encoding third argument:
