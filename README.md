@@ -60,32 +60,35 @@ snowball.stemword(
 ### Supported language second argument:
 
  * arabic
+ * armenian
  * basque
  * catalan
+ * catalan
  * danish
+ * dutch
  * dutch
  * english
  * finnish
  * french
+ * french
  * german
  * greek
  * hindi
- * indonesian
  * hungarian
+ * indonesian
  * irish
  * italian
  * lithuanian
  * nepali
  * norwegian
  * portuguese
- * spanish
- * swedish
  * romanian
  * russian
+ * serbian
+ * spanish
+ * swedish
  * tamil
  * turkish
- * armenian
- * serbian
  * yiddish
  * porter (not a language)
 
@@ -97,10 +100,12 @@ snowball.stemword(
 
 ## To compile, run
 
-Supported NodeJS versions: 10.x, 11.x, 12.x
+Supported NodeJS versions: 14.x, 16.x, 18.x
 
 ```
-npm build .
+npm npm run clean
+npm npm run configure
+npm npm run build
 npm test
 ```
 
