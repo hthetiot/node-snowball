@@ -23,7 +23,7 @@
     "configure": "node-gyp configure",
     "clean": "node-gyp clean",
     "build": "node-gyp build",
-    "release": "npm run configure && npm run build",
+    "release": "npm run clean && npm run configure && npm run build",
     "test": "jest"
   },
   "devDependencies": {
