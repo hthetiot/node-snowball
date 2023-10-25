@@ -68,6 +68,7 @@ snowball.stemword(
  * greek
  * hindi
  * indonesian
+ * hungarian
  * irish
  * italian
  * lithuanian
