@@ -103,9 +103,9 @@ snowball.stemword(
 Supported NodeJS versions: 14.x, 16.x, 18.x
 
 ```
-npm npm run clean
-npm npm run configure
-npm npm run build
+npm run clean
+npm run configure
+npm run build
 npm test
 ```
 
