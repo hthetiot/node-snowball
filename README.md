@@ -15,12 +15,15 @@ Examples:
 > "argued", "argues", "arguing", and "argus" reduce to the stem "argu" (illustrating the case where the stem
 > is not itself a word or root) but "argument" and "arguments" reduce to the stem "argument".
 
-This library is using bindings to the [libstemmer](http://snowball.tartarus.org/download.html) C library.
+This library is using bindings to the [libstemmer](https://snowballstem.org/download.html) C library.
 It's support
 
 More about Stemming:
 - [Stemming wikipedia](http://en.wikipedia.org/wiki/Stemming)
 - [Racinisation wikipedia](http://fr.wikipedia.org/wiki/Racinisation)
+
+More about Snowball libstemmer library:
+- [https://snowballstem.org](https://snowballstem.org)
 
 ## Install
 ```
@@ -57,12 +60,16 @@ snowball.stemword(
 ### Supported language second argument:
 
  * arabic
+ * armenian
  * basque
+ * catalan
  * catalan
  * danish
  * dutch
+ * dutch
  * english
  * finnish
+ * french
  * french
  * german
  * greek
@@ -75,12 +82,14 @@ snowball.stemword(
  * nepali
  * norwegian
  * portuguese
- * spanish
- * swedish
  * romanian
  * russian
+ * serbian
+ * spanish
+ * swedish
  * tamil
  * turkish
+ * yiddish
  * porter (not a language)
 
 ### Supported encoding third argument:
@@ -91,10 +100,12 @@ snowball.stemword(
 
 ## To compile, run
 
-Supported NodeJS versions: 10.x, 11.x, 12.x
+Supported NodeJS versions: 14.x, 16.x, 18.x
 
 ```
-npm build .
+npm npm run clean
+npm npm run configure
+npm npm run build
 npm test
 ```
 
