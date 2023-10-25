@@ -1,7 +1,7 @@
 const snowball = require('../index')
 
 describe('test stemword', () => {
-  ['english', 'french', 'arabic'].forEach(lang => {
+  ['english', 'french', 'arabic', 'italian', 'portuguese'].forEach(lang => {
     describe(`for ${lang} words`, () => {
       const words = require(`./resources/${lang}.json`); 
 
