@@ -100,13 +100,20 @@ snowball.stemword(
 
 ## To compile, run
 
-Supported NodeJS versions: 14.x, 16.x, 18.x
+Supported NodeJS versions: 18.x, 20.x, 22.x
 
-```
+
+```bash
 npm run clean
 npm run configure
 npm run build
 npm test
+```
+
+With Custom Pyhton PATH for node-gyp:
+
+```bash
+NODE_GYP_FORCE_PYTHON=/opt/homebrew/bin/python3.11 npm rebuild
 ```
 
 ## License
