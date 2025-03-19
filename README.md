@@ -102,12 +102,18 @@ snowball.stemword(
 
 Supported NodeJS versions: 18.x, 20.x, 22.x
 
-```
-NODE_GYP_FORCE_PYTHON=/opt/homebrew/bin/python3.11 npm rebuild
+
+```bash
 npm run clean
 npm run configure
 npm run build
 npm test
+```
+
+With Custom Pyhton PATH for node-gyp:
+
+```bash
+NODE_GYP_FORCE_PYTHON=/opt/homebrew/bin/python3.11 npm rebuild
 ```
 
 ## License
