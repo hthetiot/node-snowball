@@ -59,7 +59,7 @@
                 "src/libstemmer/src_c/stem_UTF_8_tamil.c",
                 "src/libstemmer/src_c/stem_UTF_8_turkish.c",
                 "src/libstemmer/src_c/stem_UTF_8_yiddish.c",
-      ],
+      ]
     }
   ]
 }
