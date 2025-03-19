@@ -120,7 +120,7 @@ NODE_GYP_FORCE_PYTHON=/opt/homebrew/bin/python3.11 npm rebuild
 
 (MIT License)
 
-Copyright (c) 2014 Harold Thetiot <hthetiot@gmail.com>
+Copyright (c) 2014 Harold Thetiot
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
