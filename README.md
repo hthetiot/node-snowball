@@ -110,7 +110,7 @@ npm run build
 npm test
 ```
 
-With Custom Pyhton PATH for node-gyp:
+With Custom Python 3.11 PATH for node-gyp:
 
 ```bash
 NODE_GYP_FORCE_PYTHON=/opt/homebrew/bin/python3.11 npm rebuild
