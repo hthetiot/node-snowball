@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "jest": "^29.4.3",
-    "node-gyp": "^9.4.0"
+    "node-gyp": "^12.1.0"
   },
   "dependencies": {
     "nan": "^2.22.2"
